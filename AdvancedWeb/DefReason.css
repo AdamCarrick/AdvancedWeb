@@ -1,0 +1,37 @@
+@CHARSET "ISO-8859-1";
+
+#LOGO
+{
+	
+}
+
+#WIKHEAD
+{
+	color: red;
+
+}
+
+#NAVBAR
+{
+	float: LEFT;
+}
+
+#ACCOUNT
+{
+	float: right;
+		
+}
+
+#headLeft{
+	float: left;
+}
+#headRight{
+	float: right;
+}
+#content
+{
+	position: absolute:
+	left: 300px;
+}
+
+#body{color: black;}
