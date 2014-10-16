@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<script>
+function checkInput()
+{
+		var text;
+		//x = document.getElemtByID("name").value;
+	
+		if (document.forms["inputForm"]["name"].value==""){
+			window.alert("Name Empty");
+		}
+		if (document.forms["inputForm"]["age"].value==""){
+			window.alert("Age unselected");
+		}
+		if (document.forms["inputForm"]["gender"].value==""){
+			window.alert("Gender blank");
+		}
+		if (!document.forms["inputForm"]["tc"].checked){
+			window.alert("Accept the T&Cs");
+		}
+		
+		var tc;
+		if (document.forms["inputForm"]["tc"].checked)
+		{
+			tc="Checked";
+			}else{
+				tc="not checked";
+				}
+	
+		text = "Name is " + document.forms["inputForm"]["name"].value
+			+ " Age is"  + document.forms["inputForm"]["age"].value
+			+ " Gender is " + document.forms["inputForm"]["gender"].value
+			+ "  TC is " + tc
+			+ "<br>";
+		
+		document.getElementById("test").innerHTML = text;
+}
+</script>
+
+
+<title>Form Validation</title>
+</head>
+<body>
+<form name="inputForm" action="#">
+	Name <input type="text" name="name" id="name">
+	<br/>
+	Age <select name="age" >
+			<option value="">0-18</option>
+			<option value="18-30">18-30</option>
+			<option value="30-45">30-45</option>
+			<option value="45-60">45-60</option>
+			<option value="60+">60+</option>
+		</select>
+	<br/>
+	Gender
+	<br/>
+	<input type="radio" name="gender" value="male">Male
+	<br/>
+	<input type="radio" name="gender" value="female">Female
+	<br/>
+	Terms and Coditions <input type="checkbox" name="tc">
+	<br/>
+	<button type="button" onclick="checkInput()">Submit</button>
+	<br/>
+</form>
+<p id="test"></p>
+
+
+</body>
+</html>
