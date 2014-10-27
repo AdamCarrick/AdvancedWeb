@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+	margin:50;
+}
+
+canvas{
+
+}
+</style>
+
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<canvas id="c">
+	
+</canvas>
+
+
+	<script>
+		var c = document.getElementById("c");
+		var ctx = c.getContext("2d");
+		c.height = 200;
+		c.width = 200;
+		
+		var text = "qwertyuiopasdfghjklzxcvbnm";
+		text = text.split("");		
+		var colFontSize = 20;
+		var coloums = 2;
+		
+		var drop = [];
+		for(var x =0; x<coloums; x++){
+			drop[x] = 1;
+		}		
+		
+		
+		function draw(){
+			ctx.fillStyle ="rgba(0,0,0,0.2)";
+			ctx.fillRect(0,0,c.width,c.height);
+			
+			ctx.font = colFontSize + "px arial";
+			ctx.fillStyle="red";
+			
+			//ctx.fillStyle = "red";
+			
+			for(var i=0;i<drop.length;i++){
+				var randomIndex = Math.floor(Math.random() * text.length);
+				var charToDisplay = text[randomIndex];
+				var xCord = (i * colFontSize);
+				var yCord = (drop[i] * colFontSize);
+				
+				ctx.fillText(charToDisplay,xCord,yCord);
+				drop[i]++;
+			}
+			
+		}
+		
+		setInterval(draw,50);
+		draw();
+		
+	</script>
+</body>
+</html>

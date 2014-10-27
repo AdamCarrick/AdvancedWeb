@@ -1,0 +1,20 @@
+@CHARSET "UTF-8";
+
+.HLeft
+{
+	background-color:red;
+	
+} 
+
+.HRight
+{
+	background-color:blue;
+	
+}
+
+.LeftBar
+{
+	background-color:green;
+	height:95%;
+	
+}
