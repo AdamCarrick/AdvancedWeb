@@ -8,4 +8,16 @@
 	</buildSpec>
 	<natures>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>BBindex.html</name>
+			<type>1</type>
+			<location>C:/Users/panboy/git/AdvancedWeb/AdvancedWeb/backbone/index.html</location>
+		</link>
+		<link>
+			<name>main.js</name>
+			<type>1</type>
+			<location>C:/Users/panboy/git/AdvancedWeb/AdvancedWeb/backbone/app/js/main.js</location>
+		</link>
+	</linkedResources>
 </projectDescription>
